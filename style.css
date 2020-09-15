@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Bahnschrift;
+
+    background-color: #14da7d;
+}
+
+nav {
+    display: flex;
+    justify-content:  flex-end;
+}
+
+nav p {
+    margin: 0;
+    padding: 3px;
+
+    background-color: teal;
+    
+    flex: 1;
+}
+
+nav p#pInicio {
+    flex: 2;
+}
+
+nav p a {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    text-align: center;
+}
+
+main div {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: 1px 2px 4px black;
+
+    background-color: #048825;
+}
