@@ -1,44 +1,82 @@
+/* Raiz */
+
 body {
     margin: 0;
     padding: 0;
 
-    font-family: Bahnschrift;
+    font-family: Bahnschrift, Arial, Helvetica, sans-serif;
+    font-size: 16px;
 
-    background-color: #14da7d;
+    background-color: rgb(2, 0, 34);
 }
+
+a, a:visited {
+    color: rgb(1, 26, 163);
+}
+
+a:active, a:hover {
+    color: white;
+    transition: 550ms;
+}
+
+/* Barra de navegação (navbar) */
 
 nav {
-    display: flex;
-    justify-content:  flex-end;
+    background-color: rgb(2, 0, 14);
 }
 
-nav p {
-    margin: 0;
-    padding: 3px;
+/* Sobre mim */
 
-    background-color: teal;
-    
-    flex: 1;
-}
-
-nav p#pInicio {
-    flex: 2;
-}
-
-nav p a {
-    color: black;
-    text-decoration: none;
-}
-
-main {
+#SobreMim {
     text-align: center;
+
+    max-width: 600px;
+    margin: 30px auto;
+
+    background-color: cornflowerblue;
+
+    font-size: 1.4em;
 }
 
-main div {
-    margin: 10px;
-    padding: 5px;
-    border-radius: 6px;
-    box-shadow: 1px 2px 4px black;
+#SobreMim img {
+    margin-top: 10px;
+    border-radius: 10px;
 
-    background-color: #048825;
+    box-shadow: 0 0 10px 0 rgb(45, 44, 68);
+}
+
+hr {
+    margin: 0 5px;
+    border-color: gray;
+}
+
+/* Redes sociais */
+
+#Social {
+    width: 300px;
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+#Social #IG {
+    list-style-image: url(Icones/instagram.svg);
+}
+
+#Social #GH {
+    list-style-image: url(Icones/github.svg);
+}
+
+#Social #LI {
+    list-style-image: url(Icones/linkedin.svg);
+}
+
+#Social li {
+    margin-bottom: 3px;
+}
+
+/* Rodapé (footer) */
+
+footer {
+    background-color: cornflowerblue;
 }
