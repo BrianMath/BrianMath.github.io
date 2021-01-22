@@ -16,7 +16,9 @@ a, a:visited {
 
 a:active, a:hover {
     color: white;
-    transition: 550ms;
+
+    transition: 400ms;
+    -webkit-transition: 400ms;
 }
 
 /* Barra de navegação (navbar) */
@@ -29,50 +31,60 @@ nav {
 
 #SobreMim {
     text-align: center;
+    font-size: 1.4em;
 
     max-width: 600px;
     margin: 30px auto;
+    border-radius: 20px 0 20px 0;
 
     background-color: cornflowerblue;
-
-    font-size: 1.4em;
 }
 
-#SobreMim img {
+#SobreMim #Eu img {
     margin-top: 10px;
-    border-radius: 10px;
+    
+    border-radius: 20px 0 20px 0;
+    border: 3px solid rgb(1, 26, 163);
+}
 
-    box-shadow: 0 0 10px 0 rgb(45, 44, 68);
+#SobreMim p {
+    margin: 0;
+}
+
+#SobreMim p#Profissao {
+    font-size: 0.75em;
+
+    margin: 1px 0 20px;
 }
 
 hr {
     margin: 0 5px;
-    border-color: gray;
+    border-color: rgb(0, 0, 0);
 }
 
 /* Redes sociais */
 
 #Social {
-    width: 300px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
 
-    text-align: left;
+    height: 50px;
 }
 
-#Social #IG {
-    list-style-image: url(Icones/instagram.svg);
+#Social a {
+    display: flex;
+    text-align: center;
 }
 
-#Social #GH {
-    list-style-image: url(Icones/github.svg);
+#Social img {
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
 }
 
-#Social #LI {
-    list-style-image: url(Icones/linkedin.svg);
-}
-
-#Social li {
-    margin-bottom: 3px;
+#Social img:hover {
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
 }
 
 /* Rodapé (footer) */
