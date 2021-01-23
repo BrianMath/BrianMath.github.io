@@ -1,5 +1,17 @@
 /* Raiz */
 
+:root {
+    --corFundo0: #020022;
+    --corFundo1: #6495ed;
+    --corFundo2: #0e0e0e;
+
+    --corDestaque1: #011aa3;
+    --corDestaque2: #dfdfdf;
+
+    --corLinks1: #1e90ff;
+    --corLinks2: #ffab1f;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -7,24 +19,30 @@ body {
     font-family: Bahnschrift, Arial, Helvetica, sans-serif;
     font-size: 16px;
 
-    background-color: rgb(2, 0, 34);
+    background-color: var(--corFundo0);
 }
 
 a, a:visited {
-    color: rgb(1, 26, 163);
+    color: var(--corLinks1);
 }
 
 a:active, a:hover {
-    color: white;
+    color: var(--corLinks2);
 
-    transition: 400ms;
-    -webkit-transition: 400ms;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+p {
+    margin: 0;
 }
 
 /* Barra de navegação (navbar) */
 
 nav {
-    background-color: rgb(2, 0, 14);
+    background-color:  var(--corFundo2);
+
+    padding: 15px;
 }
 
 /* Sobre mim */
@@ -37,14 +55,17 @@ nav {
     margin: 30px auto;
     border-radius: 20px 0 20px 0;
 
-    background-color: cornflowerblue;
+    background-color: var(--corFundo1);
 }
 
 #SobreMim #Eu img {
     margin-top: 10px;
+
+    width: 200px;
+    height: auto;
     
     border-radius: 20px 0 20px 0;
-    border: 3px solid rgb(1, 26, 163);
+    border: 3px solid var(--corDestaque1);
 }
 
 #SobreMim p {
@@ -59,7 +80,7 @@ nav {
 
 hr {
     margin: 0 5px;
-    border-color: rgb(0, 0, 0);
+    border-color: black;
 }
 
 /* Redes sociais */
@@ -90,5 +111,9 @@ hr {
 /* Rodapé (footer) */
 
 footer {
-    background-color: cornflowerblue;
+    background-color: var(--corFundo2);
+
+    color: var(--corDestaque2);
+
+    padding: 15px;
 }
