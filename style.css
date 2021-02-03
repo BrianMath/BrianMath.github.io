@@ -1,12 +1,14 @@
 /* Raiz */
 
 :root {
-    --corFundo0: #020022;
-    --corFundo1: #6495ed;
-    --corFundo2: #0e0e0e;
+    --corBody: #020022;
+    --corPrincipal: #6495ed;
+    --corSecundaria: #0e0e0e;
 
     --corDestaque1: #011aa3;
     --corDestaque2: #dfdfdf;
+    --corDestaque3: #1b1b1b;
+    --corDestaque4: #001fcf;
 
     --corLinks1: #1e90ff;
     --corLinks2: #ffab1f;
@@ -19,7 +21,7 @@ body {
     font-family: Bahnschrift, Arial, Helvetica, sans-serif;
     font-size: 16px;
 
-    background-color: var(--corFundo0);
+    background-color: var(--corBody);
 }
 
 a, a:visited {
@@ -37,12 +39,54 @@ p {
     margin: 0;
 }
 
-/* Barra de navegação (navbar) */
+footer {
+    background-color: var(--corSecundaria);
 
-nav {
-    background-color:  var(--corFundo2);
+    color: var(--corDestaque2);
 
     padding: 15px;
+}
+
+/* Barra de navegação (navbar) */
+
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--corSecundaria);
+}
+
+nav li {
+    float: none;
+}
+
+nav a.LinkNavbar {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    
+    color: var(--corDestaque2);
+}
+
+nav a.LinkNavbar:hover {
+    background-color: var(--corDestaque3);
+}
+
+nav a#Inicio {
+    background-color: var(--corDestaque1);
+}
+
+nav a#Inicio:hover {
+    background-color: var(--corDestaque4);
+}
+
+@media screen and (min-width: 600px) {
+    nav li {
+        float: left;
+    }
 }
 
 /* Sobre mim */
@@ -55,7 +99,7 @@ nav {
     margin: 30px auto;
     border-radius: 20px 0 20px 0;
 
-    background-color: var(--corFundo1);
+    background-color: var(--corPrincipal);
 }
 
 #SobreMim #Eu img {
@@ -68,11 +112,7 @@ nav {
     border: 3px solid var(--corDestaque1);
 }
 
-#SobreMim p {
-    margin: 0;
-}
-
-#SobreMim p#Profissao {
+#SobreMim #Profissao {
     font-size: 0.75em;
 
     margin: 1px 0 20px;
@@ -88,14 +128,12 @@ hr {
 #Social {
     display: flex;
     justify-content: space-evenly;
-    text-align: center;
 
     height: 50px;
 }
 
 #Social a {
     display: flex;
-    text-align: center;
 }
 
 #Social img {
@@ -106,14 +144,4 @@ hr {
 #Social img:hover {
     transform: scale(1.4);
     -webkit-transform: scale(1.4);
-}
-
-/* Rodapé (footer) */
-
-footer {
-    background-color: var(--corFundo2);
-
-    color: var(--corDestaque2);
-
-    padding: 15px;
 }
