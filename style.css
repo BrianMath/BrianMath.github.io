@@ -1,37 +1,43 @@
-/* Raiz */
+/* ----- Raiz - Configurações padrões ----- */
 
 :root {
-    --corBody: #020022;
-    --corPrincipal: #6495ed;
-    --corSecundaria: #0e0e0e;
+    --pretoEscuro: #131313;
+    --pretoClaro: #1b1b1b;
 
-    --corDestaque1: #011aa3;
-    --corDestaque2: #dfdfdf;
-    --corDestaque3: #1b1b1b;
-    --corDestaque4: #001fcf;
+    --azulEscurao: #020024;
+    --azulEscuro: #090979;
+    --azul: #011aa3;
+    --azulDestaque: #001fcf;
+    --azulClaro: #0a7dd4;
+    --azulClarinho: #00d4ff;
 
-    --corLinks1: #1e90ff;
-    --corLinks2: #ffab1f;
+    --laranja: #e4c30b;
 }
 
 body {
     margin: 0;
     padding: 0;
 
-    font-family: Bahnschrift, Arial, Helvetica, sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 16px;
+    font-weight: 600;
 
-    background-color: var(--corBody);
+    background: linear-gradient(0deg, var(--azulEscurao) 0%, var(--azulEscuro) 35%, var(--azulClaro) 75%, var(--azulClarinho) 100%) fixed;
+    background: -moz-linear-gradient(0deg, var(--azulEscurao) 0%, var(--azulEscuro) 35%, var(--azulClaro) 75%, var(--azulClarinho) 100%) fixed;
+    background: -o-linear-gradient(0deg, var(--azulEscurao) 0%, var(--azulEscuro) 35%, var(--azulClaro) 75%, var(--azulClarinho) 100%) fixed;
+    background: -webkit-linear-gradient(90deg, var(--azulEscurao) 0%, var(--azulEscuro) 35%, var(--azulClaro) 75%, var(--azulClarinho) 100%) fixed; */
 }
 
 a, a:visited {
-    color: var(--corLinks1);
+    color: var(--azulClaro);
 }
 
 a:active, a:hover {
-    color: var(--corLinks2);
+    color: orange;
 
     transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
 }
 
@@ -39,15 +45,7 @@ p {
     margin: 0;
 }
 
-footer {
-    background-color: var(--corSecundaria);
-
-    color: var(--corDestaque2);
-
-    padding: 15px;
-}
-
-/* Barra de navegação (navbar) */
+/* ----- Navbar (Barra de navegação) ----- */
 
 nav ul {
     list-style-type: none;
@@ -56,42 +54,51 @@ nav ul {
     margin: 0;
     padding: 0;
 
-    background-color: var(--corSecundaria);
+    background-color: var(--pretoEscuro);
 }
 
-nav li {
+nav ul li {
     float: none;
 }
 
-nav a.LinkNavbar {
+nav li a.LinkNavbar {
     display: block;
     padding: 15px;
     text-decoration: none;
     
-    color: var(--corDestaque2);
+    color: white;
 }
 
-nav a.LinkNavbar:hover {
-    background-color: var(--corDestaque3);
+nav li a.LinkNavbar:hover {
+    background-color: var(--pretoClaro);
 }
 
-nav a#Inicio {
-    background-color: var(--corDestaque1);
+nav li a#Inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--azul);
 }
 
-nav a#Inicio:hover {
-    background-color: var(--corDestaque4);
+nav li a#Inicio:hover {
+    background-color: var(--azulDestaque);
+}
+
+nav li a#Inicio img {
+    margin-right: 5px;
 }
 
 @media screen and (min-width: 600px) {
-    nav li {
+    nav ul li {
         float: left;
     }
 }
 
-/* Sobre mim */
+/* ----- Section #SobreMim ----- */
 
-#SobreMim {
+section#SobreMim {
     text-align: center;
     font-size: 1.4em;
 
@@ -99,20 +106,20 @@ nav a#Inicio:hover {
     margin: 30px auto;
     border-radius: 20px 0 20px 0;
 
-    background-color: var(--corPrincipal);
+    background-color: var(--laranja);
 }
 
-#SobreMim #Eu img {
+section#SobreMim div#Eu img {
     margin-top: 10px;
 
     width: 200px;
     height: auto;
     
     border-radius: 20px 0 20px 0;
-    border: 3px solid var(--corDestaque1);
+    border: 3px solid var(--azulEscuro);
 }
 
-#SobreMim #Profissao {
+section#SobreMim div#Eu p#Profissao {
     font-size: 0.75em;
 
     margin: 1px 0 20px;
@@ -123,25 +130,65 @@ hr {
     border-color: black;
 }
 
-/* Redes sociais */
+/* ----- Address #Social (contatos) ----- */
 
-#Social {
+address#Social {
     display: flex;
     justify-content: space-evenly;
 
     height: 50px;
 }
 
-#Social a {
+address#Social a {
     display: flex;
 }
 
-#Social img {
+address#Social img {
     transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
     -webkit-transition: all 0.6s ease;
 }
 
-#Social img:hover {
+address#Social img:hover {
     transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    -ms-transform: scale(1.4);
     -webkit-transform: scale(1.4);
+}
+
+/* ----- Section #Xadrez ----- */
+
+section#Xadrez {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#Xadrez p {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: white;
+
+    margin-bottom: 5px;
+}
+
+section#Xadrez iframe {
+    width: 500px;
+    height: 500px;
+
+    overflow-x: auto;
+
+    border: 2px solid white;
+}
+
+/* ----- Footer (Rodapé) ----- */
+
+footer {
+    background-color: var(--pretoEscuro);
+    color: white;
+
+    padding: 15px;
+    margin-top: 10px;
 }
