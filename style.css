@@ -14,6 +14,10 @@
     --laranja: #e4c30b;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -25,7 +29,7 @@ body {
     background: linear-gradient(0deg, var(--azulEscurao) 0%, var(--azulEscuro) 35%, var(--azulClaro) 75%, var(--azulClarinho) 100%) fixed;
     background: -moz-linear-gradient(0deg, var(--azulEscurao) 0%, var(--azulEscuro) 35%, var(--azulClaro) 75%, var(--azulClarinho) 100%) fixed;
     background: -o-linear-gradient(0deg, var(--azulEscurao) 0%, var(--azulEscuro) 35%, var(--azulClaro) 75%, var(--azulClarinho) 100%) fixed;
-    background: -webkit-linear-gradient(90deg, var(--azulEscurao) 0%, var(--azulEscuro) 35%, var(--azulClaro) 75%, var(--azulClarinho) 100%) fixed; */
+    background: -webkit-linear-gradient(90deg, var(--azulEscurao) 0%, var(--azulEscuro) 35%, var(--azulClaro) 75%, var(--azulClarinho) 100%) fixed;
 }
 
 a, a:visited {
@@ -98,13 +102,19 @@ nav li a#Inicio img {
 
 /* ----- Section #SobreMim ----- */
 
+div#wallpaper {
+    background-image: url("Assets/Imagens/wallpaper.jpg");
+    height: 80vh;
+    background-attachment: fixed;
+}
+
 section#SobreMim {
     text-align: center;
     font-size: 1.4em;
 
     max-width: 600px;
-    margin: 30px auto;
-    border-radius: 20px 0 20px 0;
+    margin: 0 auto 30px;
+    border-radius: 0 0 20px 20px;
 
     background-color: var(--laranja);
 }
@@ -175,7 +185,7 @@ section#Xadrez p {
 }
 
 section#Xadrez iframe {
-    width: 500px;
+    width: 80vw;
     height: 500px;
 
     overflow-x: auto;
