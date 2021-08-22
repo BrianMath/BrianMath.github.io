@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
 
+    <!-- manifest.json (para PWA) -->
     <link rel="manifest" href="manifest.json">
 </head>
 
@@ -25,7 +26,7 @@
             <ul>
                 <li>
                     <a href="index.html" target="_self" class="LinkNavbar" id="Inicio">
-                        <img src="Assets/Icones/home.svg" alt="Página inicial">
+                        <img src="Assets/Icones/home.svg" alt="Página inicial" width="16" height="16">
                         <p>Início</p>
                     </a>
                 </li>
@@ -45,7 +46,7 @@
         <div id="wallpaper" loading="lazy">
             <section id="SobreMim">
                 <div id="Eu">
-                    <img src="Assets/Imagens/EU.jpg" loading="lazy">
+                    <img src="Assets/Imagens/EU.jpg" loading="lazy" alt="Minha cara" width="210" height="230">
                     <p>Brian Matheus</p>
                     <p id="Profissao">Estudante</p>
                 </div>
@@ -53,14 +54,16 @@
                 <hr>
 
                 <address id="Social">
-                    <a href="https://www.instagram.com/_brianmatheus_/" title="Perfil do Instagram" target="_blank" rel="noreferrer">
-                        <img src="Assets/Icones/instagram.svg" alt="Instagram">
+                    <a href="https://www.instagram.com/_brianmatheus_/" title="Perfil do Instagram" target="_blank" rel="noreferrer noopener">
+                        <img src="Assets/Icones/instagram.svg" alt="Instagram" width="30" height="30">
                     </a>
-                    <a href="https://github.com/BrianMath" title="Perfil do Github" target="_blank" rel="noreferrer">
-                        <img src="Assets/Icones/github.svg" alt="Github">
+
+                    <a href="https://github.com/BrianMath" title="Perfil do Github" target="_blank" rel="noreferrer noopener">
+                        <img src="Assets/Icones/github.svg" alt="Github" width="30" height="30">
                     </a>
-                    <a href="https://www.linkedin.com/in/brian-matheus-rodrigues-ribeiro/" title="Perfil do LinkedIn" target="_blank" rel="noreferrer">
-                        <img src="Assets/Icones/linkedin.svg" alt="LinkedIn">
+
+                    <a href="https://www.linkedin.com/in/brian-matheus-rodrigues-ribeiro/" title="Perfil do LinkedIn" target="_blank" rel="noreferrer noopener">
+                        <img src="Assets/Icones/linkedin.svg" alt="LinkedIn" width="30" height="30">
                     </a>
                 </address>
             </section>
@@ -68,7 +71,26 @@
 
         <section id="Xadrez">
             <p>&darr; Jogue xadrez online &darr;</p>
-            <iframe src="https://play.chessbase.com" loading="lazy" rel="noreferrer noopener"></iframe>
+            <div id="Buttons">
+                <button onclick="mostrarTabuleiro()">Começar</button>
+                <button onclick="pararTabuleiro()">Parar</button>    
+            </div>
+
+            <iframe width="1024" height="980" frameborder="0" style="padding: 0; margin:0" id="Tabuleiro" rel="noreferrer noopener">
+                <p>Your browser does not support iframes.</p>
+                <p>Seu navegador não suporta iframes.</p>
+            </iframe>
+
+            <a href="https://chess.org" target="_blank" rel="noreferrer noopener">
+                <picture>
+                    <source media="(min-width: 750px)" srcset="https://chess.org/page/referral/banners/chess.org/07280090.jpg" width="728" height="90"
+                            alt="Chess.org - Imagem grande">
+                    <source media="(min-width: 490px)" srcset="https://chess.org/page/referral/banners/chess.org/04680060.jpg" width="468" height="60"
+                            alt="Chess.org - Imagem média">
+                    <img src="https://chess.org/page/referral/banners/chess.org/03200050.jpg" width="320" height="50"
+                         alt="Chess.org - Imagem pequena">
+                </picture>
+            </a>
         </section>
     </main>
 
@@ -85,9 +107,16 @@
         </p>
 
         <p>
-            * Chess board by <a href="https://play.chessbase.com/en" target="_blank" rel="noreferrer noopener">Chessbase</a>
+            * Chess board by <a href="https://chess.org/" target="_blank" rel="noreferrer noopener">chess.org</a>
+        </p>
+
+        <p>
+            * <a href="https://edermunizz.itch.io/free-pixel-art-forest" target="_blank" rel="noreferrer noopener">Forest pixel art</a> by <a href="https://itch.io/profile/edermunizz" target="_blank" rel="noreferrer noopener">edermunizz</a>
         </p>
     </footer>
+
+    <!-- Arquivo .js global -->
+    <script src="script.js"></script>
 
     <!-- Cria o Service Worker (para PWA) -->
     <script>

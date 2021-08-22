@@ -22,7 +22,7 @@ body {
     margin: 0;
     padding: 0;
 
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Chakra Petch', Roboto, sans-serif;
     font-size: 16px;
     font-weight: 600;
 
@@ -103,12 +103,13 @@ nav li a#Inicio img {
 /* ----- Section #SobreMim ----- */
 
 div#wallpaper {
-    background-image: url("Assets/Imagens/wallpaper.jpg");
+    background-image: url("Assets/Imagens/wallpaper.png");
+    background-position: 0 -200px;
     height: 80vh;
     background-attachment: fixed;
 }
 
-section#SobreMim {
+#SobreMim {
     text-align: center;
     font-size: 1.4em;
 
@@ -119,7 +120,7 @@ section#SobreMim {
     background-color: var(--laranja);
 }
 
-section#SobreMim div#Eu img {
+#SobreMim #Eu img {
     margin-top: 10px;
 
     width: 200px;
@@ -129,7 +130,7 @@ section#SobreMim div#Eu img {
     border: 3px solid var(--azulEscuro);
 }
 
-section#SobreMim div#Eu p#Profissao {
+#SobreMim #Eu p#Profissao {
     font-size: 0.75em;
 
     margin: 1px 0 20px;
@@ -142,25 +143,29 @@ hr {
 
 /* ----- Address #Social (contatos) ----- */
 
-address#Social {
+#Social {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 
     height: 50px;
 }
 
-address#Social a {
+#Social a {
     display: flex;
 }
 
-address#Social img {
+#Social img {
     transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
     -webkit-transition: all 0.6s ease;
+
+    width: 30px;
+    height: 30px;
 }
 
-address#Social img:hover {
+#Social img:hover {
     transform: scale(1.4);
     -moz-transform: scale(1.4);
     -o-transform: scale(1.4);
@@ -170,27 +175,43 @@ address#Social img:hover {
 
 /* ----- Section #Xadrez ----- */
 
-section#Xadrez {
+#Xadrez {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-section#Xadrez p {
+#Xadrez p {
     font-size: 1.5em;
     font-weight: 600;
     color: white;
 
-    margin-bottom: 5px;
+    margin: 10px 0;
 }
 
-section#Xadrez iframe {
+#Xadrez #Buttons {
+    margin: 0 0 20px;
+}
+
+#Xadrez #Buttons button {
+    font-family: 'Chakra Petch', Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+
+    width: 100px;
+}
+
+#Xadrez iframe {
     width: 80vw;
-    height: 500px;
+    height: 550px;
 
     overflow-x: auto;
 
     border: 2px solid white;
+}
+
+#Xadrez picture img {
+    margin-top: 10px;
 }
 
 /* ----- Footer (Rodapé) ----- */
