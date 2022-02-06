@@ -25,7 +25,7 @@
     <link rel="shortcut icon" href="Assets/Icones/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Fonte Chakra Petch -> 400, 500, 600 e 600 itálico -->
+    <!-- Fonte Chakra Petch - 400, 500, 600 e 600 itálico -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
@@ -60,69 +60,71 @@
                     </li>
     
                     <li>
-                        <a href="#" target="_self" class="LinkNavbar">Página 1</a>
+                        <a href="https://brianmath.github.io/GuessTheFlag/" target="_self" class="LinkNavbar">Guess the Flag</a>
                     </li>
     
-                    <li>
+                    <!-- <li>
                         <a href="#" target="_self" class="LinkNavbar">Página 2</a>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
         </header>
     
         <main>
-            <div id="Wallpaper">
-                <section id="SobreMim">
-                    <div id="Eu">
-                        <img src="Assets/Imagens/EU.jpg" loading="lazy" alt="Minha cara" width="210" height="230">
-                        <p>Brian Matheus</p>
-                        <p id="Profissao">Estudante</p>
-                    </div>
-    
-                    <hr>
-    
-                    <address id="Social">
-                        <a href="https://www.instagram.com/_brianmatheus_/" title="Perfil do Instagram" target="_blank" rel="noreferrer noopener">
-                            <img src="Assets/Icones/instagram.svg" alt="Instagram" width="30" height="30">
-                        </a>
-    
-                        <a href="https://github.com/BrianMath" title="Perfil do Github" target="_blank" rel="noreferrer noopener">
-                            <img src="Assets/Icones/github.svg" alt="Github" width="30" height="30">
-                        </a>
-    
-                        <a href="https://www.linkedin.com/in/brian-matheus-rodrigues-ribeiro/" title="Perfil do LinkedIn" target="_blank" rel="noreferrer noopener">
-                            <img src="Assets/Icones/linkedin.svg" alt="LinkedIn" width="30" height="30">
-                        </a>
-
-                        <a href="https://wa.me/?text=*Dê uma olhada nesse site:* https://brianmath.github.io/" title="Convite pelo Whatsapp" target="_blank" rel="noreferrer noopener">
-                            <img src="Assets/Icones/whatsapp.svg" alt="Whatsapp" width="30" height="30">
-                        </a>
-                    </address>
-                </section>
-            </div>
-    
-            <section id="Xadrez">
-                <p>&darr; Jogue xadrez online &darr;</p>
-                <div id="Buttons">
-                    <button onclick="mostrarTabuleiro()">Começar</button>
-                    <button onclick="pararTabuleiro()">Parar</button>    
+            <section id="SobreMim">
+                <div id="Eu">
+                    <img src="https://piskel-imgstore-b.appspot.com/img/825a1623-8789-11ec-9d75-e3f61f8b733f.gif" loading="lazy" alt="Minha cara" width="210" height="230">
+                    <p>Brian Matheus</p>
+                    <p id="Profissao">Estudante</p>
                 </div>
-    
-                <iframe width="1024" height="980" frameborder="0" style="padding: 0; margin:0" id="Tabuleiro" rel="noreferrer noopener">
-                    <p>Your browser does not support iframes.</p>
-                    <p>Seu navegador não suporta iframes.</p>
-                </iframe>
-    
-                <a href="https://chess.org" target="_blank" rel="noreferrer noopener">
+
+                <address id="Social">
+                    <a href="https://www.instagram.com/_brianmatheus_/" title="Perfil do Instagram" target="_blank" rel="noreferrer noopener">
+                        <img src="Assets/Icones/instagram.svg" alt="Instagram" width="30" height="30">
+                    </a>
+
+                    <a href="https://github.com/BrianMath" title="Perfil do Github" target="_blank" rel="noreferrer noopener">
+                        <img src="Assets/Icones/github.svg" alt="Github" width="30" height="30">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/brian-matheus-rodrigues-ribeiro/" title="Perfil do LinkedIn" target="_blank" rel="noreferrer noopener">
+                        <img src="Assets/Icones/linkedin.svg" alt="LinkedIn" width="30" height="30">
+                    </a>
+
+                    <a href="https://wa.me/?text=*Dê uma olhada nesse site:* https://brianmath.github.io/" title="Convite pelo Whatsapp" target="_blank" rel="noreferrer noopener">
+                        <img src="Assets/Icones/whatsapp.svg" alt="Whatsapp" width="30" height="30">
+                    </a>
+                </address>
+            </section>
+
+            <section id="Portfolio">
+                <h1>Meus projetos</h1>
+
+                <div class="Projeto">
                     <picture>
-                        <source media="(min-width: 750px)" srcset="https://chess.org/page/referral/banners/chess.org/07280090.jpg" width="728" height="90"
-                                alt="Chess.org - Imagem grande">
-                        <source media="(min-width: 490px)" srcset="https://chess.org/page/referral/banners/chess.org/04680060.jpg" width="468" height="60"
-                                alt="Chess.org - Imagem média">
-                        <img src="https://chess.org/page/referral/banners/chess.org/03200050.jpg" width="320" height="50"
-                             alt="Chess.org - Imagem pequena">
+                        <source srcset="Assets/Imagens/Projeto1/Projeto1_Grande.jpg" media="(min-width: 1024px)" loading="lazy" alt="Projeto de alternar entre tema escuro e claro do site"> <!-- 711x400 -->
+                        <source srcset="Assets/Imagens/Projeto1/Projeto1_Medio.jpg" media="(min-width: 425px)" loading="lazy" alt="Projeto de alternar entre tema escuro e claro do site"> <!-- 533x300 -->
+                        <img src="Assets/Imagens/Projeto1/Projeto1_Pequeno.jpg" loading="lazy" alt="Projeto de alternar entre tema escuro e claro do site"> <!-- 333x300 -->
                     </picture>
-                </a>
+                    <span>
+                        <a href="https://brianmath.github.io/DesafiosWEB/ThemeSwitcher" target="_blank" rel="noreferrer noopener">Theme Switcher</a>
+                    </span>
+                    <p>Essa página apresenta um botão que permite alternar entre os temas escuro e claro do site. Só alterna a cor do fundo atualmente, mas poderia mudar a cor das letras também</p>
+                </div>
+
+                <hr>
+
+                <div class="Projeto">
+                    <picture>
+                        <source srcset="Assets/Imagens/Projeto2/Projeto2_Grande.jpg" media="(min-width: 1024px)" loading="lazy" alt="Projeto que ensina o básico sobre xadrez"> <!-- 790x450 -->
+                        <source srcset="Assets/Imagens/Projeto2/Projeto2_Medio.jpg" media="(min-width: 425px)" loading="lazy" alt="Projeto que ensina o básico sobre xadrez"> <!-- 527x300 -->
+                        <img src="Assets/Imagens/Projeto2/Projeto2_Pequeno.jpg" loading="lazy" alt="Projeto que ensina o básico sobre xadrez"> <!-- 326x299 -->
+                    </picture>
+                    <span>
+                        <a href="https://bateria-instantanea.github.io/Xeque-mate/" target="_blank" rel="noreferrer noopener">Xeque-mate</a>
+                    </span>
+                    <p>Site que ensina sobre o básico de xadrez, como movimento de cada peça, movimentos especiais, nomenclaturas dos lances e sites de xadrez</p>
+                </div>
             </section>
         </main>
     
@@ -145,13 +147,9 @@
             <p>
                 * <a href="https://iconscout.com/icon/games-battle-checkmate-chess-knight-horse-figure" target="_blank" rel="noreferrer noopener">Games Colored Outline Icon</a> on <a href="https://iconscout.com" target="_blank" rel="noreferrer noopener">Iconscout</a>
             </p>
-    
+
             <p>
-                * Chess board by <a href="https://chess.org/" target="_blank" rel="noreferrer noopener">chess.org</a>
-            </p>
-    
-            <p>
-                * <a href="https://edermunizz.itch.io/free-pixel-art-forest" target="_blank" rel="noreferrer noopener">Forest pixel art</a> by <a href="https://itch.io/profile/edermunizz" target="_blank" rel="noreferrer noopener">edermunizz</a>
+                * <a href="https://piskel-imgstore-b.appspot.com/img/825a1623-8789-11ec-9d75-e3f61f8b733f.gif" target="_blank" rel="noreferrer noopener">Gif de nuvem</a> por <a href="https://instagram.com/vhf273" target="_blank" rel="noreferrer noopener">Vitor Hugo</a>
             </p>
         </footer>
     </section>

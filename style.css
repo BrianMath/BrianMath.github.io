@@ -1,5 +1,4 @@
 /* ----- Raiz - Configurações padrões ----- */
-
 :root {
     --pretoEscuro: #131313;
     --pretoClaro: #1b1b1b;
@@ -10,10 +9,6 @@
     --azulDestaque: #001fcf;
     --azulClaro: #0a7dd4;
     --azulClarinho: #00d4ff;
-
-    --laranja: #e4c30b;
-
-    --verde: #15e015;
 }
 
 html {
@@ -41,23 +36,29 @@ a, a:visited {
 a:active, a:hover {
     color: orange;
 
-    transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 p {
     margin: 0;
+    font-size: 1.2em;
 }
 
-hr {
-    margin: 0 5px;
-    border-color: #fff;
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main > * {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px;
 }
 
 /* ----- Navbar (Barra de navegação) ----- */
-
 nav ul {
     list-style-type: none;
     overflow: hidden;
@@ -72,7 +73,7 @@ nav ul li {
     float: none;
 }
 
-nav li a.LinkNavbar {
+a.LinkNavbar {
     display: block;
     padding: 15px;
     text-decoration: none;
@@ -80,24 +81,23 @@ nav li a.LinkNavbar {
     color: #fff;
 }
 
-nav li a.LinkNavbar:hover {
+a.LinkNavbar:hover {
     background-color: var(--pretoClaro);
 }
 
-nav li a#Inicio {
+a#Inicio {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
     background-color: var(--azul);
 }
 
-nav li a#Inicio:hover {
+a#Inicio:hover {
     background-color: var(--azulDestaque);
 }
 
-nav li a#Inicio img {
+a#Inicio img {
     margin-right: 5px;
 }
 
@@ -108,26 +108,16 @@ nav li a#Inicio img {
 }
 
 /* ----- Section #SobreMim ----- */
-
-#Wallpaper {
-    background-image: url("Assets/Imagens/wallpaper.png");
-    background-position: 0 -200px;
-    height: 80vh;
-    background-attachment: fixed;
-}
-
 #SobreMim {
     text-align: center;
     font-size: 1.4em;
 
-    max-width: 600px;
-    margin: 0 auto 30px;
     border-radius: 0 0 20px 20px;
 
-    background-color: var(--laranja);
+    background-color: #e4c30b;
 }
 
-#SobreMim #Eu img {
+#Eu img {
     margin-top: 10px;
 
     width: 200px;
@@ -137,14 +127,13 @@ nav li a#Inicio img {
     border: 3px solid var(--azulEscuro);
 }
 
-#SobreMim #Eu p#Profissao {
+#Profissao {
     font-size: 0.75em;
 
     margin: 1px 0 20px;
 }
 
 /* ----- Address #Social (contatos) ----- */
-
 #Social {
     display: flex;
     justify-content: space-evenly;
@@ -153,6 +142,7 @@ nav li a#Inicio img {
     height: 50px;
 
     background-color: #0000001f;
+    border-radius: 0 0 20px 20px;
 }
 
 #Social a {
@@ -177,49 +167,74 @@ nav li a#Inicio img {
     -webkit-transform: scale(1.4);
 }
 
-/* ----- Section #Xadrez ----- */
-
-#Xadrez {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ---- Section #Portfolio ---- */
+#Portfolio {
+    text-align: center;
+    background-color: #ba2946;
+    border-radius: 5px;
 }
 
-#Xadrez p {
-    font-size: 1.5em;
-    font-weight: 600;
+h1 {
+    font-size: 2.2em;
+    margin: 5px 0;
     color: #fff;
-
-    margin: 10px 0;
 }
 
-#Xadrez #Buttons {
-    margin: 0 0 20px;
+.Projeto {
+    position: relative;
+    margin-bottom: 5px;
 }
 
-#Xadrez #Buttons button {
-    font-family: 'Chakra Petch', Roboto, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-
-    width: 100px;
+.Projeto img {
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
 }
 
-#Xadrez iframe {
-    width: 80vw;
-    height: 550px;
+.Projeto span {
+    position: absolute;
+    left: 0;
+    top: 269px;
 
-    overflow-x: auto;
-
-    border: 2px solid #fff;
+    background-color: #ffffff6b;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 0 3px;
 }
 
-#Xadrez picture img {
-    margin-top: 10px;
+hr {
+	margin: 15px 0 20px;
+	border-color: #fff;
+}
+
+.Projeto p {
+    background-color: #ffffff2d;
+}
+
+span a {
+    color: #fff;
+}
+
+.Projeto span:hover {
+    background-color: #3a3a3aa9;
+}
+
+@media screen and (min-width: 1024px) {
+    #Portfolio {
+		max-width: 1000px;
+	}
+
+	.Projeto img {
+		height: 450px;
+	}
+
+	.Projeto span {
+		top: initial;
+		bottom: 55px;
+	}
 }
 
 /* ----- Footer (Rodapé) ----- */
-
 footer {
     background-color: var(--pretoEscuro);
     color: #fff;
